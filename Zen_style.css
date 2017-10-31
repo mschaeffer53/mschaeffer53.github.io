@@ -1,5 +1,5 @@
 body {
-    background:black;
+    background:#fff;
     margin:0;
 }
 
@@ -17,7 +17,7 @@ color:#fff; font-size:1.2EM;padding:40px}
 color:#fff; font-size:1.2EM; padding:40px}
 
 .main{background: #fff;
-color:black; border-style:solid; border-radius: 10px; padding: 40px}
+color:black; border-style:solid; border-radius: 20px; padding: 40px; margin: 40px 210px 40px 210px; border-width: 2px}
 .main a{color:#63D471}
 
 
