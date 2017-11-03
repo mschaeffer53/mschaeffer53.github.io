@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73e12d5d-e05d-44d0-be3e-9133be3b8db3" name="Default" comment="">
+    <list default="true" id="73e12d5d-e05d-44d0-be3e-9133be3b8db3" name="Default" comment="Initial Commit">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Marcel_repo/python/10,000.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Marcel_repo/python/DiceGame.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Marcel_repo/python/blackjack.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Marcel_repo/python/contacts.csv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Marcel_repo/python/contacts_rewrite.csv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Marcel_repo/python/lab_LCRsimulator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Zen_style_xx_advanced.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index_gossip.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index_lunch.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index_news.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index_sports.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Marcel_repo/python/lab29_RoadTrip.py" afterPath="$PROJECT_DIR$/../Marcel_repo/python/lab29_RoadTrip.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Marcel_repo/python/test.py" afterPath="$PROJECT_DIR$/../Marcel_repo/python/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mschaeffer53.github.io.iml" afterPath="$PROJECT_DIR$/.idea/mschaeffer53.github.io.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zen_Mockup_Lab.html" afterPath="$PROJECT_DIR$/Zen_Mockup_Lab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index_style.css" afterPath="$PROJECT_DIR$/index_style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,28 +32,108 @@
       <file leaf-file-name="Zen_Mockup_Lab.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zen_Mockup_Lab.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1911">
-              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
               <folding>
-                <element signature="e#11699#11707#1" expanded="true" />
+                <element signature="e#11711#11719#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mschaeffer53.github.io" pinned="false" current-in-tab="false">
-        <entry file="https://github.com/mschaeffer53/mschaeffer53.github.io">
-          <provider selected="true" editor-type-id="httpFileEditor">
+      <file leaf-file-name="Zen_style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zen_style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-273">
+              <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_lunch.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_lunch.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="987">
+              <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_news.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_news.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_sports.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index_sports.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Zen_style_xx_advanced.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zen_style_xx_advanced.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alligator.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alligator.jpg">
+          <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="position_style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/position_style.css">
+      <file leaf-file-name="index_style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="766">
+              <caret line="106" column="24" lean-forward="false" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_gossip.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_gossip.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="45" column="199" lean-forward="false" selection-start-line="45" selection-start-column="199" selection-end-line="45" selection-end-column="199" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,8 +144,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML4 File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -72,14 +157,20 @@
       <list>
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/text.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/testing.html" />
         <option value="$PROJECT_DIR$/Zen_Mockup.html" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/Zen_Mockup_Lab.html" />
-        <option value="$PROJECT_DIR$/Zen_style.css" />
         <option value="$PROJECT_DIR$/position.html" />
         <option value="$PROJECT_DIR$/position_style.css" />
+        <option value="$PROJECT_DIR$/Zen_style.css" />
+        <option value="$PROJECT_DIR$/Zen_Mockup_Lab.html" />
+        <option value="$PROJECT_DIR$/Zen_style_xx_advanced.css" />
+        <option value="$PROJECT_DIR$/index_news.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/index_gossip.html" />
+        <option value="$PROJECT_DIR$/index_lunch.html" />
+        <option value="$PROJECT_DIR$/index_sports.html" />
+        <option value="$PROJECT_DIR$/index_style.css" />
       </list>
     </option>
   </component>
@@ -90,9 +181,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="178" />
-    <option name="y" value="134" />
-    <option name="width" value="1792" />
+    <option name="x" value="861" />
+    <option name="width" value="1067" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -320,14 +410,41 @@
       <option name="project" value="LOCAL" />
       <updated>1509487391321</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1509488696481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1509488696481</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <created>1509488781671</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1509488781671</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2nd revision">
+      <created>1509489680660</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1509489680660</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initial Commit">
+      <created>1509491238531</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1509491238531</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.346875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21041666" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -355,6 +472,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="2nd revision" />
     <MESSAGE value="Initial Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
@@ -368,7 +486,7 @@
         <state relative-caret-position="1911">
           <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="e#11699#11707#1" expanded="true" />
+            <element signature="e#11711#11719#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -391,7 +509,7 @@
         <state relative-caret-position="1911">
           <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="e#11699#11707#1" expanded="true" />
+            <element signature="e#11711#11719#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -414,7 +532,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#11699#11707#1" expanded="true" />
+            <element signature="e#11711#11719#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -422,21 +540,7 @@
     <entry file="file://$PROJECT_DIR$/text.html" />
     <entry file="file://$PROJECT_DIR$/test.html" />
     <entry file="file://$PROJECT_DIR$/Zen_Mockup.html" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/style.css" />
     <entry file="file://$PROJECT_DIR$/testing.html" />
-    <entry file="file://$PROJECT_DIR$/Zen_style.css" />
-    <entry file="file://$PROJECT_DIR$/position.html" />
-    <entry file="file://$PROJECT_DIR$/Zen_Mockup_Lab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="e#11699#11707#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="https://github.com/mschaeffer53/mschaeffer53.github.io">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
@@ -444,9 +548,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/position_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        <state relative-caret-position="420">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/position.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="69" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alligator.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zen_Mockup_Lab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+          <folding>
+            <element signature="e#11711#11719#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zen_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zen_style_xx_advanced.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_gossip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="45" column="199" lean-forward="false" selection-start-line="45" selection-start-column="199" selection-end-line="45" selection-end-column="199" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-273">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="106" column="24" lean-forward="false" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_lunch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_sports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
