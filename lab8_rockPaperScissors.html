@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="description" content="Description">
+    <link rel="stylesheet" type="text/css" href="Style">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        let user_choice = prompt('Rock, paper or scissors??;');
+        let rps = ['rock', 'paper', 'scissors'];
+        function random_element(array) {
+	        let random_index = Math.floor(Math.random()*array.length);
+	        return array[random_index];
+        }
+        let computer_choice = random_element(rps);
+
+//        document.write('Computer picks '+ computer_choice)
+        alert('Cpu picks '+computer_choice);
+
+        if (computer_choice === user_choice){
+            alert('Tie!');
+        }
+       else if (computer_choice == 'rock' && user_choice == 'scissors' || computer_choice == 'paper' && user_choice == 'rock' || computer_choice == 'scissors' && user_choice == 'paper'){
+            alert('Cpu wins');
+        }
+        else{
+            alert('User wins');
+        }
+
+
+
+    </script>
+</body>
+</html>
