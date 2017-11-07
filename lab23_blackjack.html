@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <title>Blackjack</title>
     <meta name="description" content="Description">
-    <link rel="stylesheet" type="text/css" href="Style">
+    <link rel="stylesheet" type="text/css" href="blackjack_style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <h1>
+        Blackjack(ish) Game by Marcel
+    </h1>
+
+
+
+
+
     <script>
         function random_element(array) {
             let random_index = Math.floor(Math.random() * array.length);
@@ -19,17 +27,25 @@
         2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
         2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a'];
 
+        let dealer_hand = [];
         let hand = [];
 
+
         //deal 2 cards into hand and remove cards from deck
-        while (hand.length < 2){
-            let card = random_element(deck);
-            hand.push(card);
-            let i = deck.indexOf(card);
-            deck.splice(i,1)
+        function initial_hand(empty_hand) {
+            while (empty_hand.length < 2) {
+                let card = random_element(deck);
+                empty_hand.push(card);
+                let i = deck.indexOf(card);
+                deck.splice(i, 1)
+            }
         }
 
-        alert(hand);
+        initial_hand(dealer_hand);
+        initial_hand(hand);
+
+        alert('The dealer has: ' + dealer_hand);
+        alert('Your hand is: ' + hand);
 
         let hand_value = 0;
         let ace_in_hand = false;
@@ -126,5 +142,7 @@
             advice(hand_value);
         }
     </script>
+
+
 </body>
 </html>
