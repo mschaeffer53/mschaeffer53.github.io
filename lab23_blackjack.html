@@ -39,73 +39,92 @@
 
         let hit = false;
 
-        for(let i=0; i<hand.length; ++i){
-            if(typeof(hand[i]) === 'number') {
-                hand_value += hand[i]
-            }
-            else if (hand[i] === 'j' || hand[i] === 'q' || hand[i] === 'k'){
-                hand_value += 10
-            }
-            else {
-                hand_value += 11;
-                if (three_aces_in_hand === true){
-                    four_aces_in_hand = true
-                };
-                if (two_aces_in_hand === true){
-                    three_aces_in_hand = true
-                };
-                if (ace_in_hand === true){
-                    two_aces_in_hand = true
-                };
-                ace_in_hand = true;
+
+        //calculate hand_value
+        function calc_hand_value(hand) {
+            for (let i = 0; i < hand.length; ++i) {
+                if (typeof(hand[i]) === 'number') {
+                    hand_value += hand[i]
+                }
+                else if (hand[i] === 'j' || hand[i] === 'q' || hand[i] === 'k') {
+                    hand_value += 10
+                }
+                else {
+                    hand_value += 11;
+                    if (three_aces_in_hand === true) {
+                        four_aces_in_hand = true
+                    }
+                    ;
+                    if (two_aces_in_hand === true) {
+                        three_aces_in_hand = true
+                    }
+                    ;
+                    if (ace_in_hand === true) {
+                        two_aces_in_hand = true
+                    }
+                    ;
+                    ace_in_hand = true;
                 }
             }
 
-        //check for aces and adjust hand value
-        if(hand_value > 21 && ace_in_hand === true){
-            hand_value -= 10;
+            //check for aces and adjust hand value
+            if (hand_value > 21 && ace_in_hand === true) {
+                hand_value -= 10;
+            }
+
+            if (hand_value > 21 && two_aces_in_hand === true) {
+                hand_value -= 10;
+            }
+
+            if (hand_value > 21 && three_aces_in_hand === true) {
+                hand_value -= 10;
+            }
+            if (hand_value > 21 && four_aces_in_hand === true) {
+                hand_value -= 10;
+            }
+            return hand_value
         }
 
-        if(hand_value > 21 && two_aces_in_hand === true){
-            hand_value -= 10;
-        }
+        hand_value = calc_hand_value(hand);
 
-        if (hand_value > 21 && three_aces_in_hand === true){
-            hand_value -=10;
-        }
-        if (hand_value > 21 && four_aces_in_hand === true){
-            hand_value -=10;
-        }
 
         //print results
-        if (hand_value === 21){
-            hit = false;
-            alert(hand_value + ' You win!')
+        function advice(hand_value) {
+            if (hand_value === 21) {
+                hit = false;
+                alert(hand_value + ' You win!')
+            }
+
+            if (hand_value > 21) {
+                hit = false;
+                alert(hand_value + ' Bust! You Lose.')
+            }
+
+            if (hand_value > 16 && hand_value < 21) {
+                hit = false;
+                alert(hand_value + ' Stay!')
+            }
+
+            if (hand_value < 17) {
+                hit = true;
+                alert(hand_value + ' Hit.')
+            }
+            return hit
         }
 
-        if (hand_value > 21){
-            hit = false;
-            alert(hand_value + ' Bust! You Lose.')
+        hit = advice(hand_value);
+
+        //repl while advice is hit
+        while (hit === true){
+            let card = random_element(deck);
+            hand.push(card);
+            let i = deck.indexOf(card);
+            deck.splice(i,1);
+            hand_value = 0;
+            calc_hand_value(hand);
+            alert(hand);
+            advice(hand_value);
         }
-
-        if (hand_value > 16 && hand_value < 21){
-            hit = false;
-            alert(hand_value + ' Stay!')
-        }
-
-        if (hand_value < 17){
-            hit = true;
-            alert(hand_value + ' Hit.')
-        }
-
-
-//        while hit === true{
-//            let card = random_element(deck);
-//            hand.push(card);
-//            let i = deck.indexOf(card);
-//            deck.splice(i,1)
-//        }
-        document.write(deck)
     </script>
 </body>
 </html>
