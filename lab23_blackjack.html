@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blackjack</title>
+    <meta name="description" content="Description">
+    <link rel="stylesheet" type="text/css" href="Style">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        function random_element(array) {
+            let random_index = Math.floor(Math.random() * array.length);
+            return array[random_index];
+        }
+
+        let cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a'];
+        let hand = [];
+
+        //deal 3 cards into hand
+        while (hand.length < 3){
+            let card = random_element(cards);
+            hand.push(card)
+        }
+
+        alert(hand);
+
+        let hand_value = 0;
+
+        for(let i=0; i<hand.length; ++i){
+            if(typeof(hand[i]) === 'number') {
+                hand_value += hand[i]
+            }
+            else if (hand[i] === 'j' || hand[i] === 'q' || hand[i] === 'k'){
+                hand_value += 10
+            }
+            else {
+                hand_value += 11;
+                {
+                    if (hand_value > 21) {
+                        hand_value -= 10;
+                    }
+                }
+            }
+        }
+        alert(hand_value)
+
+
+    </script>
+</body>
+</html>
