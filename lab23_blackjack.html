@@ -14,18 +14,30 @@
             return array[random_index];
         }
 
-        let cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a'];
+        let deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
+        2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
+        2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
+        2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a'];
+
         let hand = [];
 
-        //deal 3 cards into hand
-        while (hand.length < 3){
-            let card = random_element(cards);
-            hand.push(card)
+        //deal 2 cards into hand and remove cards from deck
+        while (hand.length < 2){
+            let card = random_element(deck);
+            hand.push(card);
+            let i = deck.indexOf(card);
+            deck.splice(i,1)
         }
 
         alert(hand);
 
         let hand_value = 0;
+        let ace_in_hand = false;
+        let two_aces_in_hand = false;
+        let three_aces_in_hand = false;
+        let four_aces_in_hand = false;
+
+        let hit = false;
 
         for(let i=0; i<hand.length; ++i){
             if(typeof(hand[i]) === 'number') {
@@ -36,16 +48,64 @@
             }
             else {
                 hand_value += 11;
-                {
-                    if (hand_value > 21) {
-                        hand_value -= 10;
-                    }
+                if (three_aces_in_hand === true){
+                    four_aces_in_hand = true
+                };
+                if (two_aces_in_hand === true){
+                    three_aces_in_hand = true
+                };
+                if (ace_in_hand === true){
+                    two_aces_in_hand = true
+                };
+                ace_in_hand = true;
                 }
             }
+
+        //check for aces and adjust hand value
+        if(hand_value > 21 && ace_in_hand === true){
+            hand_value -= 10;
         }
-        alert(hand_value)
+
+        if(hand_value > 21 && two_aces_in_hand === true){
+            hand_value -= 10;
+        }
+
+        if (hand_value > 21 && three_aces_in_hand === true){
+            hand_value -=10;
+        }
+        if (hand_value > 21 && four_aces_in_hand === true){
+            hand_value -=10;
+        }
+
+        //print results
+        if (hand_value === 21){
+            hit = false;
+            alert(hand_value + ' You win!')
+        }
+
+        if (hand_value > 21){
+            hit = false;
+            alert(hand_value + ' Bust! You Lose.')
+        }
+
+        if (hand_value > 16 && hand_value < 21){
+            hit = false;
+            alert(hand_value + ' Stay!')
+        }
+
+        if (hand_value < 17){
+            hit = true;
+            alert(hand_value + ' Hit.')
+        }
 
 
+//        while hit === true{
+//            let card = random_element(deck);
+//            hand.push(card);
+//            let i = deck.indexOf(card);
+//            deck.splice(i,1)
+//        }
+        document.write(deck)
     </script>
 </body>
 </html>
