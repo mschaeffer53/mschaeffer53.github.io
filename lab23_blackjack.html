@@ -11,12 +11,17 @@
     <h1>
         Blackjack(ish) Game by Marcel
     </h1>
+
+    <input id="input_name" type="text" placeholder="enter your name"/>
+    <button id="submit_name">Submit</button>
+    <div></div>
+    <button id="play_game" onclick="play();">Deal Hand</button>
+
     <h2>Player's Hand</h2>
 
 
-
-    <div></div>
-
+    <div id="player_output"></div>
+    <div id="card1"></div>
 
 
     <h2>Dealer's Hand</h2>
@@ -26,24 +31,30 @@
 
 
     <script>
+        player_name = document.getElementById('input_name').value;
+
         function random_element(array) {
             let random_index = Math.floor(Math.random() * array.length);
             return array[random_index];
+        }
+
+        function clear_output() {
+            document.getElementById('output').innerText = '';
+            document.getElementById('player_output').innerText = '';
         }
 
         function append_output(text) {
             document.getElementById('output').innerText += text + '\n';
         }
 
-        let deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
-        2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
-        2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
-        2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a'];
+        function append_player_output(text) {
+            document.getElementById('player_output').innerText += text + '\n';
+        }
 
 
 
         //deal 2 cards into hand and remove cards from deck
-        function deal_cards() {
+        function deal_cards(deck) {
             let hand = [];
             while (hand.length < 2) {
                 let card = random_element(deck);
@@ -54,23 +65,14 @@
             return hand;
         }
 
-        let dealer_hand = deal_cards();
-        let hand = deal_cards();
-
-        append_output('The dealer has: ' + dealer_hand);
-        append_output('Your hand is: ' + hand);
-
-        let hand_value = 0;
-        let ace_in_hand = false;
-        let two_aces_in_hand = false;
-        let three_aces_in_hand = false;
-        let four_aces_in_hand = false;
-
-        let hit = false;
-
 
         //calculate hand_value
         function calc_hand_value(hand) {
+            let hand_value = 0;
+            let ace_in_hand = false;
+            let two_aces_in_hand = false;
+            let three_aces_in_hand = false;
+            let four_aces_in_hand = false;
             for (let i = 0; i < hand.length; ++i) {
                 if (typeof(hand[i]) === 'number') {
                     hand_value += hand[i]
@@ -111,46 +113,70 @@
             return hand_value
         }
 
-        hand_value = calc_hand_value(hand);
-
-
         //print results
         function advice(hand_value) {
             if (hand_value === 21) {
                 hit = false;
-                append_output(hand_value + ' You win!')
+                append_player_output(hand_value + ' You win!')
             }
 
             if (hand_value > 21) {
                 hit = false;
-                append_output(hand_value + ' Bust! You Lose.')
+                append_player_output(hand_value + ' Bust! You Lose.')
             }
 
             if (hand_value > 16 && hand_value < 21) {
                 hit = false;
-                append_output(hand_value + ' Stay!')
+                append_player_output(hand_value + ' Stay!')
             }
 
             if (hand_value < 17) {
                 hit = true;
-                append_output(hand_value + ' Hit.')
+                append_player_output(hand_value + ' Hit.')
             }
             return hit;
         }
 
-        hit = advice(hand_value);
 
-        //repl while advice is hit
-        while (hit === true){
-            let card = random_element(deck);
-            hand.push(card);
-            let i = deck.indexOf(card);
-            deck.splice(i,1);
-            hand_value = 0;
-            calc_hand_value(hand);
-            append_output(hand);
-            advice(hand_value);
+        function play() {
+
+            clear_output();
+
+            let deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
+                2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
+                2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
+                2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a'];
+
+
+            let dealer_hand = deal_cards(deck);
+            let hand = deal_cards(deck);
+
+            append_output('The dealer has: ' + dealer_hand);
+            append_player_output('Your hand is: ' + hand);
+
+
+            let hand_value = calc_hand_value(hand);
+
+
+            hit = advice(hand_value);
+
+            //repl while advice is hit
+            while (hit === true) {
+                let card = random_element(deck);
+                hand.push(card);
+                let i = deck.indexOf(card);
+                deck.splice(i, 1);
+                hand_value = calc_hand_value(hand);
+                append_player_output(hand);
+                advice(hand_value);
+            }
         }
+
+
+//        function change_card(card){
+//            document.getElementById(card1).innerHTML = card;
+//        }
+
     </script>
 
 
