@@ -15,23 +15,28 @@
     <input id="input_name" type="text" placeholder="enter your name"/>
     <button id="submit_name">Submit</button>
     <div></div>
-    <button id="play_game" onclick="play();">Deal Hand</button>
+    <button id="deal_bt">Deal Hand</button>
 
     <h2>Player's Hand</h2>
 
 
     <div id="player_output"></div>
-    <div id="card1"></div>
+
 
 
     <h2>Dealer's Hand</h2>
 
-    <div id="output"></div>
+    <div id="dealer_output"></div>
 
 
 
     <script>
         player_name = document.getElementById('input_name').value;
+
+        let deal_bt = document.getElementById('deal_bt');
+        deal_bt.onclick = function() {
+            play();
+        };
 
         function random_element(array) {
             let random_index = Math.floor(Math.random() * array.length);
@@ -39,12 +44,12 @@
         }
 
         function clear_output() {
-            document.getElementById('output').innerText = '';
+            document.getElementById('dealer_output').innerText = '';
             document.getElementById('player_output').innerText = '';
         }
 
-        function append_output(text) {
-            document.getElementById('output').innerText += text + '\n';
+        function append_dealer_output(text) {
+            document.getElementById('dealer_output').innerText += text + '\n';
         }
 
         function append_player_output(text) {
@@ -116,25 +121,61 @@
         //print results
         function advice(hand_value) {
             if (hand_value === 21) {
-                hit = false;
-                append_player_output(hand_value + ' You win!')
+                //append_player_output(hand_value + ' You win!')
+                return 'win';
+            } else if (hand_value > 21) {
+                //append_player_output(hand_value + ' Bust! You Lose.')
+                return 'bust';
+            } else if (hand_value > 16 && hand_value < 21) {
+                //append_player_output(hand_value + ' Stay!')
+                return 'stay';
+            } else {
+                //append_player_output(hand_value + ' Hit.')
+                return 'hit';
+            }
+        }
+
+
+
+        function process_hand(name, hand, deck) {
+            //tag.innerText += 'whatever';
+            //document.getElementById('player_output').innerText += 'whatever';
+
+            let output = name+' has: ' + hand+'\n';
+            let hand_value = calc_hand_value(hand);
+            let adv = advice(hand_value);
+            output += hand_value;
+            if (adv === 'win') {
+                output += ' You win!\n'
+            } else if (adv === 'bust') {
+                output += ' Bust! You Lose.\n';
+            } else if (adv === 'stay') {
+                output += ' Stay!\n';
+            } else {
+                output += ' Hit.\n';
             }
 
-            if (hand_value > 21) {
-                hit = false;
-                append_player_output(hand_value + ' Bust! You Lose.')
+            //repl while advice is hit
+            while (adv === 'hit') {
+                let card = random_element(deck);
+                hand.push(card);
+                let i = deck.indexOf(card);
+                deck.splice(i, 1);
+                hand_value = calc_hand_value(hand);
+                output += hand + '\n';
+                adv = advice(hand_value);
+                output += hand_value;
+                if (adv === 'win') {
+                    output += ' You win!\n'
+                } else if (adv === 'bust') {
+                    output += ' Bust! You Lost.\n';
+                } else if (adv === 'stay') {
+                    output += ' Stay!\n';
+                } else {
+                    output += ' Hit.\n';
+                }
             }
-
-            if (hand_value > 16 && hand_value < 21) {
-                hit = false;
-                append_player_output(hand_value + ' Stay!')
-            }
-
-            if (hand_value < 17) {
-                hit = true;
-                append_player_output(hand_value + ' Hit.')
-            }
-            return hit;
+            return output;
         }
 
 
@@ -147,35 +188,18 @@
                 2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
                 2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a'];
 
-
+            let player_hand = deal_cards(deck);
             let dealer_hand = deal_cards(deck);
-            let hand = deal_cards(deck);
 
-            append_output('The dealer has: ' + dealer_hand);
-            append_player_output('Your hand is: ' + hand);
+            //let p = document.getElementById('player_output');
+            //let d = document.getElementById('dealer_output');
 
+            let output_player = process_hand('player', player_hand, deck);
+            let output_dealer = process_hand('dealer', dealer_hand, deck);
 
-            let hand_value = calc_hand_value(hand);
-
-
-            hit = advice(hand_value);
-
-            //repl while advice is hit
-            while (hit === true) {
-                let card = random_element(deck);
-                hand.push(card);
-                let i = deck.indexOf(card);
-                deck.splice(i, 1);
-                hand_value = calc_hand_value(hand);
-                append_player_output(hand);
-                advice(hand_value);
-            }
+            append_player_output(output_player);
+            append_dealer_output(output_dealer);
         }
-
-
-//        function change_card(card){
-//            document.getElementById(card1).innerHTML = card;
-//        }
 
     </script>
 
