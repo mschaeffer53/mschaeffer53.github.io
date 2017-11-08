@@ -16,8 +16,7 @@
     <button id="submit_name">Submit</button>
     <div></div>
     <button id="deal_bt">Deal Hand</button>
-
-    <h2>Player's Hand</h2>
+    <h2 id="user_name">Player's Hand</h2>
 
 
     <div id="player_output"></div>
@@ -31,7 +30,12 @@
 
 
     <script>
-        player_name = document.getElementById('input_name').value;
+        let h2 = document.querySelector('#user_name');
+        let bt_name = document.querySelector('#submit_name');
+        bt_name.onclick = function () {
+            h2.innerText = document.getElementById('input_name').value+'\'s hand';
+        };
+
 
         let deal_bt = document.getElementById('deal_bt');
         deal_bt.onclick = function() {
