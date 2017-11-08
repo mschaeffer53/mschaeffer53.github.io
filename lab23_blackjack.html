@@ -21,6 +21,8 @@
 
     <h2>Dealer's Hand</h2>
 
+    <div id="output"></div>
+
 
 
     <script>
@@ -29,30 +31,34 @@
             return array[random_index];
         }
 
+        function append_output(text) {
+            document.getElementById('output').innerText += text + '\n';
+        }
+
         let deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
         2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
         2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a',
         2, 3, 4, 5, 6, 7, 8, 9, 10, 'j', 'q', 'k', 'a'];
 
-        let dealer_hand = [];
-        let hand = [];
 
 
         //deal 2 cards into hand and remove cards from deck
-        function initial_hand(empty_hand) {
-            while (empty_hand.length < 2) {
+        function deal_cards() {
+            let hand = [];
+            while (hand.length < 2) {
                 let card = random_element(deck);
-                empty_hand.push(card);
+                hand.push(card);
                 let i = deck.indexOf(card);
                 deck.splice(i, 1)
             }
+            return hand;
         }
 
-        initial_hand(dealer_hand);
-        initial_hand(hand);
+        let dealer_hand = deal_cards();
+        let hand = deal_cards();
 
-        alert('The dealer has: ' + dealer_hand);
-        alert('Your hand is: ' + hand);
+        append_output('The dealer has: ' + dealer_hand);
+        append_output('Your hand is: ' + hand);
 
         let hand_value = 0;
         let ace_in_hand = false;
@@ -77,15 +83,12 @@
                     if (three_aces_in_hand === true) {
                         four_aces_in_hand = true
                     }
-                    ;
                     if (two_aces_in_hand === true) {
                         three_aces_in_hand = true
                     }
-                    ;
                     if (ace_in_hand === true) {
                         two_aces_in_hand = true
                     }
-                    ;
                     ace_in_hand = true;
                 }
             }
@@ -115,24 +118,24 @@
         function advice(hand_value) {
             if (hand_value === 21) {
                 hit = false;
-                alert(hand_value + ' You win!')
+                append_output(hand_value + ' You win!')
             }
 
             if (hand_value > 21) {
                 hit = false;
-                alert(hand_value + ' Bust! You Lose.')
+                append_output(hand_value + ' Bust! You Lose.')
             }
 
             if (hand_value > 16 && hand_value < 21) {
                 hit = false;
-                alert(hand_value + ' Stay!')
+                append_output(hand_value + ' Stay!')
             }
 
             if (hand_value < 17) {
                 hit = true;
-                alert(hand_value + ' Hit.')
+                append_output(hand_value + ' Hit.')
             }
-            return hit
+            return hit;
         }
 
         hit = advice(hand_value);
@@ -145,7 +148,7 @@
             deck.splice(i,1);
             hand_value = 0;
             calc_hand_value(hand);
-            alert(hand);
+            append_output(hand);
             advice(hand_value);
         }
     </script>
