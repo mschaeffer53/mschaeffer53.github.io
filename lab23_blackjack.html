@@ -20,13 +20,13 @@
 
 
     <div id="player_output"></div>
-
+    <div class="card_placement"></div>
 
 
     <h2>Dealer's Hand</h2>
 
     <div id="dealer_output"></div>
-
+    <div class="card_placement"></div>
 
 
     <script>
@@ -198,8 +198,8 @@
             //let p = document.getElementById('player_output');
             //let d = document.getElementById('dealer_output');
 
-            let output_player = process_hand('player', player_hand, deck);
-            let output_dealer = process_hand('dealer', dealer_hand, deck);
+            let output_player = process_hand('Player', player_hand, deck);
+            let output_dealer = process_hand('Dealer', dealer_hand, deck);
 
             append_player_output(output_player);
             append_dealer_output(output_dealer);
